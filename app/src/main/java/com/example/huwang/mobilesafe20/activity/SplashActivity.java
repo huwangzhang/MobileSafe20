@@ -44,10 +44,11 @@ public class SplashActivity extends Activity {
         PackageManager pm = getPackageManager();
         // PackageInfo info=pm.getPackageInfo(包名, 标签数据);
         try {
+            String name = getPackageName();
             PackageInfo info = pm.getPackageInfo("com.example.huwang.mobilesafe20", 0);
             localVersionCode = info.versionCode;
             String versionName = info.versionName;
-            System.out.print(versionName);
+            System.out.println(versionName);
             versiontext.setText(versionName);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
