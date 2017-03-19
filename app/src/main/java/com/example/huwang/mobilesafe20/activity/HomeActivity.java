@@ -10,6 +10,7 @@ import com.example.huwang.mobilesafe20.R;
  * Created by huwang on 2017/3/16.
  */
 
+
 public class HomeActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
