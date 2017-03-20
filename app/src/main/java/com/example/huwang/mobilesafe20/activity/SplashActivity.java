@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -72,8 +73,8 @@ public class SplashActivity extends Activity {
             public void run() {
                 //获取数据
                 try {
-//                    String json = HttpUtil.get("http://192.168.161.226:8088/update70/jsoninfo");
-                    String json = HttpUtil.get("http://192.168.31.201:8088/update70/jsoninfo");
+                    String json = HttpUtil.get("http://192.168.161.226:8088/update70/jsoninfo");
+//                    String json = HttpUtil.get("http://192.168.31.201:8088/update70/jsoninfo");
                     System.out.println(json);
                     //解析数据
                     //{versioncode:2,versionName:"黑马福利版2.0",url:"/update70/MobileSafe70.apk",desc:"快快下载，年底可以参与抽奖，奖品：与avXXX见面"}
@@ -102,11 +103,15 @@ public class SplashActivity extends Activity {
                         handler.sendMessage(msg);
                     }
                 } catch (JSONException e) {
+                    Message msg = handler.obtainMessage();// obtainMessage查找有没有旧的有就重用，没用就创建
+                    msg.what = CODE_NET_ERROR;
+                    handler.sendMessage(msg);
                     e.printStackTrace();
                 }
             }
         }.start();
     }
+    private String savePath;
     private String desc;
     private String url;
     private int localVersionCode;
@@ -118,45 +123,70 @@ public class SplashActivity extends Activity {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case CODE_UPDATE:
-                    //弹出对话框
-                    System.out.println("弹出对话框");
-                    AlertDialog.Builder builder = new AlertDialog.Builder(SplashActivity.this);
-                    //设置标题
-                    builder.setTitle("更新提示");
-                    //更新提示
-                    builder.setMessage(desc);
-                    builder.setPositiveButton("立即更新", new DialogInterface.OnClickListener() { //响应用户操作
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            //下载安装
-                            download("http://192.168.31.201:8088" + url);
-                        }
-                    });
-                    builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                            //直接进入主页
-                        }
-                    });
-                    Dialog dialog = builder.create();
-                    dialog.show();
+                    showUpdateDialog();
+
                     break;
                 case CODE_NOUPDATE:
                     System.out.println("当前已是最新版本");
                     ToastUtil.shortToast(getBaseContext(), "当前是最新版本");
                     //进入主页
-
+                    enterHome();
                     break;
                 case CODE_NET_ERROR:
                     System.out.println("网络出错");
                     ToastUtil.shortToast(getBaseContext(), "网络出错");
+                    enterHome();
                     break;
             }
         }
     };
+    /**
+     * 进入主页
+     */
+    private void enterHome() {
+
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
+    }
+
+    private void showUpdateDialog() {
+        //弹出对话框
+        System.out.println("弹出对话框");
+        AlertDialog.Builder builder = new AlertDialog.Builder(SplashActivity.this);
+        //设置标题
+        builder.setTitle("更新提示");
+        //更新提示
+        builder.setMessage(desc);
+        builder.setPositiveButton("立即更新", new DialogInterface.OnClickListener() { //响应用户操作
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //下载安装
+                download("http://192.168.161.226:8088" + url);
+            }
+        });
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                //直接进入主页
+                enterHome();
+            }
+        });
+        Dialog dialog = builder.create();
+        //返回键
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                // TODO Auto-generated method stub
+                enterHome();
+            }
+        });
+        dialog.show();
+    }
+
     public void download(String url) {
-        String savePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/***.exe";
+        savePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/***.exe";
         System.out.println(url);
         //创建核心类
         HttpUtils httpUtils = new HttpUtils(5000);
@@ -200,6 +230,13 @@ public class SplashActivity extends Activity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 System.out.println("安装...");
+                Intent intent = new Intent();
+                intent.setAction("android.intent.action.VIEW");// 动作
+                intent.addCategory("android.intent.category.DEFAULT");// 类别
+                Uri data = Uri.parse("file://" + savePath);
+                intent.setDataAndType(data, "application/vnd.android.package-archive");
+                // startActivity(intent); 不能调用onActivityResult在处理完毕之后
+                startActivityForResult(intent, 0);
             }
         });
         builder.setNegativeButton("残忍拒绝", new DialogInterface.OnClickListener() {
@@ -207,9 +244,19 @@ public class SplashActivity extends Activity {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
                 System.out.println("残忍拒绝");
+                enterHome();
             }
         });
         Dialog dialog = builder.create();
         dialog.show();
+    }
+    /**
+     * 调用onActivityResult在处理完毕之后 在请求页面关闭之后
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // TODO Auto-generated method stub
+        super.onActivityResult(requestCode, resultCode, data);
+        enterHome();
     }
 }

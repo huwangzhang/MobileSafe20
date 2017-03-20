@@ -16,17 +16,8 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="102b27ef64ecf6bf48f659b8c063cb31ec23b4ef">
+        sha1="397415f1f88309a61649703fa5e174cb9f440a20">
         <dex dex="E:\AndroidStudioProjects\MobileSafe20\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_bd82d44adf9fde121d6c0126d389adff52133c24\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="E:\AndroidStudioProjects\MobileSafe20\DownLoad\libs\xUtils-2.6.14.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
-        <dex dex="E:\AndroidStudioProjects\MobileSafe20\DownLoad\build\intermediates\pre-dexed\debug\xUtils-2.6.14_f47e79afab504281e5b3553b79c8f4dba42ecba0.jar" />
     </item>
     <item
         is-multidex="true"

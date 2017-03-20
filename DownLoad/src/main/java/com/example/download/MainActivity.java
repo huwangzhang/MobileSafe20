@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
     public void download(View view) {
         String url = "http://192.168.31.201:8088/update70/jsoninfo";
         String savePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/***.txt";
-
+        System.out.println(savePath);
         //创建核心类
         HttpUtils httpUtils = new HttpUtils(5000);
 //        httpUtils.download(文件地址，保存路径， 获取下载参数的回掉)；
