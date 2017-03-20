@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MobileSafe</string>
+    <color name="item_name_default">#000000</color>
+    <color name="item_name_pressed">#76c900</color>
 </resources>
