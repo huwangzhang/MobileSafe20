@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity">
+
+    <!--标题-->
+    <TextView
+        style="@style/Setting_Title"
+        android:text="2.手机卡绑定"
+       />
+    <TextView
+        style="@style/Setting_Text"
+        android:text="通过绑定sim卡："/>
+    <TextView
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="下次重启手机如果发现sim卡变更就会发送报警短信"
+        style="@style/Setting_Text"/>
+    <TextView
+        android:layout_margin="5dp"
+        android:gravity="left|center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击绑定/解绑sim卡 "
+        android:drawableRight="@drawable/lock"
+        style="@style/Setting_Button" />
+
+    <include layout="@layout/view_four_dotlayout"/>
+    <!-- 按钮 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bind"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="下一步 "
+            android:drawableRight="@drawable/next"
+            style="@style/Setting_Button" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上一步 "
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/previous"
+            style="@style/Setting_Button" />
+        
+        
+    </RelativeLayout>
+</LinearLayout>

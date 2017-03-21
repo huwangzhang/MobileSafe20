@@ -58,7 +58,7 @@ public class SplashActivity extends Activity {
         PackageManager pm = getPackageManager();
         // PackageInfo info=pm.getPackageInfo(包名, 标签数据);
         try {
-            String name = getPackageName();
+//            String name = getPackageName();
             PackageInfo info = pm.getPackageInfo("com.example.huwang.mobilesafe20", 0);
             localVersionCode = info.versionCode;
             String versionName = info.versionName;
@@ -144,7 +144,6 @@ public class SplashActivity extends Activity {
      * 进入主页
      */
     private void enterHome() {
-
         startActivity(new Intent(this, HomeActivity.class));
         finish();
     }
@@ -214,6 +213,7 @@ public class SplashActivity extends Activity {
             public void onFailure(HttpException e, String s) {
                 System.out.println("Onfailure");
                 //进入主页
+                enterHome();
             }
         });
     }

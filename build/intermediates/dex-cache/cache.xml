@@ -2,31 +2,13 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
+        is-multidex="false"
         jar="E:\AndroidStudioProjects\MobileSafe20\app\libs\xUtils-2.6.14.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="f10c51f3e0732fdeefe6e104279a58e275879b6c">
-        <dex dex="E:\AndroidStudioProjects\MobileSafe20\app\build\intermediates\transforms\dex\debug\folders\1000\2\xUtils-2.6.14_b3b5ac599f1f855fd392c141b2dfd7582aafdea3\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\AndroidStudioProjects\MobileSafe20\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="397415f1f88309a61649703fa5e174cb9f440a20">
-        <dex dex="E:\AndroidStudioProjects\MobileSafe20\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_bd82d44adf9fde121d6c0126d389adff52133c24\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\AndroidStudioProjects\MobileSafe20\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="E:\AndroidStudioProjects\MobileSafe20\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_f575662f3106f4c45342160ce95fec60fb4ca253\classes.dex" />
+        <dex dex="E:\AndroidStudioProjects\MobileSafe20\app\build\intermediates\pre-dexed\debug\xUtils-2.6.14_b3b5ac599f1f855fd392c141b2dfd7582aafdea3.jar" />
     </item>
 
 </items>

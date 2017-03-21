@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity">
+
+    <!--标题-->
+    <TextView
+        style="@style/Setting_Title"
+        android:text="1.欢迎使用手机防盗"
+       />
+    <TextView
+        style="@style/Setting_Text"
+        android:text="您的手机安全卫士："/>
+    <TextView
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="SIM卡变更报警"
+        style="@style/Setting_Text"/>
+    <TextView
+        android:drawableLeft="@android:drawable/star_big_on"
+        style="@style/Setting_Text"
+        android:text="GPS追踪"/>
+    <TextView
+        android:drawableLeft="@android:drawable/star_big_on"
+        style="@style/Setting_Text"
+        android:text="远程锁屏"
+        android:gravity="left|center_vertical" />
+    <TextView
+        android:drawableLeft="@android:drawable/star_big_on"
+        style="@style/Setting_Text"
+        android:text="远程销毁数据" />
+    <!-- 提示 -->
+    <!-- 功能介绍 -->
+    <!-- 图片-->
+    <include layout="@layout/view_four_dotlayout"/>
+    <!-- 按钮 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/setup1"/>
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:background="@drawable/button_green_selector"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一步 "
+            android:drawableRight="@drawable/next"/>
+        
+        
+    </RelativeLayout>
+</LinearLayout>

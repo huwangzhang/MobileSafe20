@@ -7,5 +7,39 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="Setting_Title">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">#39941C</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="Setting_Text">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Setting_Dot_Select">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:src">@drawable/set_dot_selector</item>
+    </style>
+
+    <style name="Setting_Button">
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_green_selector</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 
 </resources>

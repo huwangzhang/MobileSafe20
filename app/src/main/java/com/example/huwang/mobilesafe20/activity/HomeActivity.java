@@ -16,6 +16,7 @@ import android.widget.GridView;
 
 import com.example.huwang.mobilesafe20.R;
 import com.example.huwang.mobilesafe20.adapter.HomeAdapter;
+import com.example.huwang.mobilesafe20.utils.MD5Utils;
 import com.example.huwang.mobilesafe20.utils.ToastUtil;
 
 /**
@@ -84,7 +85,7 @@ public class HomeActivity extends Activity {
                     return;
                 }
                 SharedPreferences.Editor editor = getSharedPreferences("config", Context.MODE_PRIVATE).edit();
-                editor.putString("pwd", "123");
+                editor.putString("pwd", MD5Utils.md5(pwd1));
                 editor.commit();
                 System.out.println("注册成功");
                 dialog.dismiss();
@@ -117,7 +118,7 @@ public class HomeActivity extends Activity {
                     return;
                 }
                 String pwd = getSharedPreferences("config", Context.MODE_PRIVATE).getString("pwd", null);
-                if (!pwd1.equals(pwd1)) {
+                if (!MD5Utils.md5(pwd1).equals(pwd)) {
                     ToastUtil.shortToast(HomeActivity.this, "密码错误");
                     return;
                 }
