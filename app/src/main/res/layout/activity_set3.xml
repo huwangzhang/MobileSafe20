@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:singleLine="true"/>
     <Button
+        android:id="@+id/select_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="选择联系人"

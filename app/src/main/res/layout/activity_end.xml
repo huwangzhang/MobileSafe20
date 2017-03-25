@@ -19,29 +19,28 @@
 
         <TextView
             style="@style/Setting_Text"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:text="安全号码" />
 
         <TextView
+            android:id="@+id/safe_number"
             style="@style/Setting_Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
             android:gravity="right|center_horizontal"
             android:text="1234" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/protect_open"
         style="@style/Setting_Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:drawableRight="@drawable/lock"
-        android:text="防盗功能还未开启" />
+        android:drawableRight="@drawable/lock_selector"
+        android:text="防盗功能是否开启" />
 
 
     <TextView

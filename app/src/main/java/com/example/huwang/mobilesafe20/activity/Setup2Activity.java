@@ -32,6 +32,9 @@ public class Setup2Activity extends BaseActivity {
             TelephonyManager tm = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
             //获取序列卡号
             String sim = tm.getSimSerialNumber();
+            if (sim == null) { // 模拟序列号
+                sim = "1111010100";
+            }
             Log.i("zhang", "Setup2Activity-----"+sim);
             SharedPreferences.Editor editor = getSharedPreferences("config", MODE_PRIVATE).edit();
             editor.putString("sim_number", sim);

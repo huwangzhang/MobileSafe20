@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -27,12 +28,13 @@ import com.example.huwang.mobilesafe20.utils.ToastUtil;
 
 public class HomeActivity extends Activity {
     private GridView gridView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //初始化数据
-        gridView = (GridView)findViewById(R.id.gridview);
+        gridView = (GridView) findViewById(R.id.gridview);
         //创建内容
         HomeAdapter adapter = new HomeAdapter(this);
         gridView.setAdapter(adapter);
@@ -62,10 +64,10 @@ public class HomeActivity extends Activity {
         builder.setView(dialogView);
         final Dialog dialog = builder.create();
         dialog.show();
-        final EditText pwd1View = (EditText)dialogView.findViewById(R.id.pwd1);
-        final EditText pwd2View = (EditText)dialogView.findViewById(R.id.pwd2);
-        Button ok = (Button)dialogView.findViewById(R.id.ok);
-        Button cancel = (Button)dialogView.findViewById(R.id.cancel);
+        final EditText pwd1View = (EditText) dialogView.findViewById(R.id.pwd1);
+        final EditText pwd2View = (EditText) dialogView.findViewById(R.id.pwd2);
+        Button ok = (Button) dialogView.findViewById(R.id.ok);
+        Button cancel = (Button) dialogView.findViewById(R.id.cancel);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,6 +95,7 @@ public class HomeActivity extends Activity {
             }
         });
     }
+
     private void showLoginDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
         builder.setTitle(null);
@@ -100,10 +103,10 @@ public class HomeActivity extends Activity {
         builder.setView(dialogView);
         final Dialog dialog = builder.create();
         dialog.show();
-        final EditText pwd1View = (EditText)dialogView.findViewById(R.id.pwd1);
-        final CheckBox show_password = (CheckBox)dialogView.findViewById(R.id.show_password);
-        Button ok = (Button)dialogView.findViewById(R.id.ok);
-        Button cancel = (Button)dialogView.findViewById(R.id.cancel);
+        final EditText pwd1View = (EditText) dialogView.findViewById(R.id.pwd1);
+        final CheckBox show_password = (CheckBox) dialogView.findViewById(R.id.show_password);
+        Button ok = (Button) dialogView.findViewById(R.id.ok);
+        Button cancel = (Button) dialogView.findViewById(R.id.cancel);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,7 +127,16 @@ public class HomeActivity extends Activity {
                     return;
                 }
                 System.out.println("登陆成功");
-                startActivity(new Intent(getBaseContext(), Setup1Activity.class));
+                Boolean set_finish = getSharedPreferences("config", Context.MODE_PRIVATE).getBoolean("finish_set", false);
+                Log.i("zhang", "登录成功");
+                //完成设置进入设置完成界面
+                if (set_finish) {
+                    //设置完成进入完成界面
+                    startActivity(new Intent(getBaseContext(), EndActivity.class));
+                } else {
+                    //没有设置进入设置界面
+                    startActivity(new Intent(getBaseContext(), Setup1Activity.class));
+                }
                 finish();
                 dialog.dismiss();
             }
