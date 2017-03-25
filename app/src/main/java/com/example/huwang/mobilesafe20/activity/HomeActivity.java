@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -123,6 +124,8 @@ public class HomeActivity extends Activity {
                     return;
                 }
                 System.out.println("登陆成功");
+                startActivity(new Intent(getBaseContext(), Setup1Activity.class));
+                finish();
                 dialog.dismiss();
             }
         });

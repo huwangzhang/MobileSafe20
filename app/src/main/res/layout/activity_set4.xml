@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity">
+
+    <!--标题-->
+    <TextView
+        style="@style/Setting_Title"
+        android:text="4.恭喜您设置成功"
+       />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="防护保护已经开启"
+        android:textSize="18sp" />
+
+    <include layout="@layout/view_four_dotlayout"/>
+    <!-- 按钮 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/phone"/>
+        <TextView
+            android:onClick="nextPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="设置完成 "
+            android:drawableRight="@drawable/next"
+            style="@style/Setting_Button" />
+        <TextView
+            android:onClick="prePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上一步 "
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/previous"
+            style="@style/Setting_Button" />
+        
+        
+    </RelativeLayout>
+</LinearLayout>

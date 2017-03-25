@@ -19,7 +19,7 @@
 
     <style name="Setting_Text">
         <item name="android:paddingLeft">5dp</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:gravity">left|center_vertical</item>
@@ -31,15 +31,16 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">3dp</item>
-        <item name="android:src">@drawable/set_dot_selector</item>
+        <item name="android:background">@drawable/set_dot_selector</item>
     </style>
 
     <style name="Setting_Button">
-        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/button_green_selector</item>
         <item name="android:textSize">18sp</item>
+        <item name="android:clickable">true</item>
     </style>
 
 </resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity">
+
+    <!--标题-->
+    <TextView
+        style="@style/Setting_Title"
+        android:text="3.设置安全号码"
+       />
+    <TextView
+        style="@style/Setting_Text"
+        android:text="SIM卡变更后"/>
+    <TextView
+        android:text="报警短信会发给安全号码"
+        style="@style/Setting_Text"/>
+    <EditText
+        android:id="@+id/safenumber"
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择联系人"
+        style="@style/Setting_Button"
+        />
+    <include layout="@layout/view_four_dotlayout"/>
+    <!-- 按钮 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/phone"/>
+        <TextView
+            android:onClick="nextPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="下一步 "
+            android:drawableRight="@drawable/next"
+            style="@style/Setting_Button" />
+        <TextView
+            android:onClick="prePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上一步 "
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@drawable/previous"
+            style="@style/Setting_Button" />
+        
+        
+    </RelativeLayout>
+</LinearLayout>

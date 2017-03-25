@@ -5,11 +5,15 @@
     android:layout_gravity="center_horizontal"
     android:orientation="horizontal">
     <!--四个点-->
-    <ImageView style="@style/Setting_Dot_Select" />
+    <TextView style="@style/Setting_Dot_Select"
+        android:id="@+id/dot1" />
 
-    <ImageView style="@style/Setting_Dot_Select" />
+    <TextView style="@style/Setting_Dot_Select"
+        android:id="@+id/dot2"/>
 
-    <ImageView style="@style/Setting_Dot_Select" />
+    <TextView style="@style/Setting_Dot_Select"
+        android:id="@+id/dot3"/>
 
-    <ImageView style="@style/Setting_Dot_Select" />
+    <TextView style="@style/Setting_Dot_Select"
+        android:id="@+id/dot4"/>
 </LinearLayout>

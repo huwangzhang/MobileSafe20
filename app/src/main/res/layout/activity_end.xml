@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity">
+
+    <!--标题-->
+    <TextView
+        style="@style/Setting_Title"
+        android:gravity="center"
+        android:text="手机防盗" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/Setting_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="安全号码" />
+
+        <TextView
+            style="@style/Setting_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="right|center_horizontal"
+            android:text="1234" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Setting_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:drawableRight="@drawable/lock"
+        android:text="防盗功能还未开启" />
+
+
+    <TextView
+        style="@style/Setting_Button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="choosePre"
+        android:text="重新进入设置向导" />
+
+    <TextView
+        style="@style/Setting_Text"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="GPS追踪:location" />
+
+    <TextView
+        style="@style/Setting_Text"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="播放报警音乐:alarm" />
+
+    <TextView
+        style="@style/Setting_Text"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="远程数据销毁:wipedata" />
+
+    <TextView
+        style="@style/Setting_Text"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:gravity="left|center_vertical"
+        android:text="远程锁屏:lockscreen" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/Setting_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="savePage"
+            android:textSize="22sp"
+            android:text="完成进入主页 " />
+    </RelativeLayout>
+    <!-- 提示 -->
+    <!-- 功能介绍 -->
+
+</LinearLayout>

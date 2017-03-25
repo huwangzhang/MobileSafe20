@@ -46,16 +46,13 @@
             android:layout_centerInParent="true"
             android:src="@drawable/setup1"/>
         <TextView
-            android:layout_marginBottom="10dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:background="@drawable/button_green_selector"
-            android:textSize="18sp"
+            android:onClick="nextPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:text="下一步 "
-            android:drawableRight="@drawable/next"/>
+            android:drawableRight="@drawable/next"
+            style="@style/Setting_Button" />
         
         
     </RelativeLayout>

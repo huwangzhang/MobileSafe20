@@ -19,12 +19,13 @@
         android:text="下次重启手机如果发现sim卡变更就会发送报警短信"
         style="@style/Setting_Text"/>
     <TextView
+        android:id="@+id/bind"
         android:layout_margin="5dp"
         android:gravity="left|center_vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="点击绑定/解绑sim卡 "
-        android:drawableRight="@drawable/lock"
+        android:drawableRight="@drawable/lock_selector"
         style="@style/Setting_Button" />
 
     <include layout="@layout/view_four_dotlayout"/>
@@ -39,6 +40,7 @@
             android:layout_centerInParent="true"
             android:src="@drawable/bind"/>
         <TextView
+            android:onClick="nextPage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -46,6 +48,7 @@
             android:drawableRight="@drawable/next"
             style="@style/Setting_Button" />
         <TextView
+            android:onClick="prePage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="上一步 "
