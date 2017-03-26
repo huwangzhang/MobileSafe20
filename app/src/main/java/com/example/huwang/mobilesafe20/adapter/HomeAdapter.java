@@ -21,7 +21,7 @@ public class HomeAdapter extends BaseAdapter {
         this.context = context;
     }
 
-    private String[] names = new String[] {
+    private String[] names = new String[]{
             "手机防盗",
             "通讯卫士",
             "软件管家",
@@ -33,18 +33,13 @@ public class HomeAdapter extends BaseAdapter {
             "设置中心",
     };
 
-    private int[] images = new int[] {
-            R.drawable.ic_app_selector,
-            R.drawable.app,
-            R.drawable.app,
-            R.drawable.app,
-            R.drawable.app,
-            R.drawable.app,
-            R.drawable.app,
-            R.drawable.app,
-            R.drawable.app,
-            R.drawable.app
+    private int[] images = new int[]{
+            R.drawable.safe,
+            R.drawable.callmsgsafe, R.drawable.ic_app_selector,
+            R.drawable.taskmanager, R.drawable.netmanager, R.drawable.trojan,
+            R.drawable.sysoptimize, R.drawable.atools, R.drawable.settings
     };
+
     //getCount 返回格子数
     //getView 返回网格视图 显示制定下标的数据
     //getItem 返回制定下标数据
@@ -63,6 +58,7 @@ public class HomeAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return 0;
     }
+
     //getView 返回网格视图 显示制定下标的数据
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -71,8 +67,8 @@ public class HomeAdapter extends BaseAdapter {
         //视图
         //把布局转换成对象View：布局膨胀
         View view = View.inflate(context, R.layout.view_item_gridview, null);
-        ImageView iconView = (ImageView)view.findViewById(R.id.icon);
-        TextView nameView = (TextView)view.findViewById(R.id.name);
+        ImageView iconView = (ImageView) view.findViewById(R.id.icon);
+        TextView nameView = (TextView) view.findViewById(R.id.name);
         iconView.setImageResource(resid);
         nameView.setText(name);
         return view;

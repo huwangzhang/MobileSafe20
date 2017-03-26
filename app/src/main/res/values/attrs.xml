@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--name控件名-->
+    <declare-styleable name="SettingCenterView">
+        <attr name="m_title" format="reference|string"/>
+        <attr name="desc_on" format="reference|string"/>
+        <attr name="desc_off" format="reference|string"/>
+        <attr name="check" format="boolean"/>
+    </declare-styleable>
+
+</resources>

@@ -67,6 +67,24 @@ public class SplashActivity extends Activity {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
+        //false
+        Boolean item_updateBoolean = getSharedPreferences("config", MODE_PRIVATE).getBoolean("item_update", false);
+        if (!item_updateBoolean) {
+            new Thread(){
+                @Override
+                public void run() {
+                    super.run();
+                    try {
+                        Thread.sleep(3000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    enterHome();
+                }
+            }.start();
+            return;  //更新关闭直接返回，不执行更新
+        }
+        //true
         //获取版本信息
         new Thread() {
             @Override

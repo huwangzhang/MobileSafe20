@@ -28,15 +28,32 @@
         android:textColor="#EA0000"
         android:textSize="17sp" />
     <!--网格-->
-    <GridView
-        android:id="@+id/gridview"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1"
-        android:horizontalSpacing="5dp"
-        android:listSelector="@drawable/ic_bg_selector"
-        android:numColumns="3"
-        android:verticalSpacing="5dp"></GridView>
+        android:layout_weight="1">
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="5dp"
+            android:listSelector="@drawable/ic_bg_selector"
+            android:numColumns="3"
+            android:verticalSpacing="5dp"></GridView>
+
+        <LinearLayout
+            android:id="@+id/my_menu"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/view_item_menu" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
 
 </LinearLayout>

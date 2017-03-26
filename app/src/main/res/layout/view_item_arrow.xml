@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="#006699"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity" >
+
+    <!-- 标题 -->
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/title"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="归属地提示框风格"
+        android:textSize="24sp" />
+    <!-- 描述 -->
+      <TextView
+          android:layout_marginTop="3dp"
+           android:layout_marginLeft="10dp"
+        android:id="@+id/desc_style"
+        android:layout_below="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="默认"
+        android:textSize="18sp" />
+    <!-- 复选 -->
+
+    <TextView
+        android:clickable="true"
+        android:background="@drawable/jiantou1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp" />
+
+</RelativeLayout>

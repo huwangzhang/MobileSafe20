@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#006699"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/app"/>
+    <!--标题-->
+    <TextView
+        android:textColor="@drawable/item_name_selector"
+        android:id="@+id/name"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="手机防盗"
+        android:textSize="20sp"/>
+
+
+
+</LinearLayout>

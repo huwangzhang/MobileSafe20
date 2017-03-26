@@ -47,6 +47,9 @@
         <activity
             android:name=".activity.SelectContactActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name=".activity.SettingCenterActivity"
+            android:label="@string/app_name" />
 
     </application>
 </manifest>
