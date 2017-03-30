@@ -57,7 +57,7 @@ public class Setup3Activity extends BaseActivity {
 
 
         //显示保存安全号码
-        String numberString = getSharedPreferences("config", Context.MODE_PRIVATE).getString("safenumber", null);
+        String numberString = getSharedPreferences("config", Context.MODE_PRIVATE).getString("safenumber", "");
         safenumber.setText(numberString+"");
         safenumber.addTextChangedListener(new TextWatcher() {
             //

@@ -1,1 +1,1 @@
-include ':app', ':DownLoad'
+include ':app', ':DownLoad', ':smsreceiver', ':takephotos'
