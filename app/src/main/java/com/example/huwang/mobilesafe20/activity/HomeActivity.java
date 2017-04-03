@@ -62,6 +62,9 @@ public class HomeActivity extends Activity {
                     case 1:// 通讯卫士
                         startActivity(new Intent(getBaseContext(), SmsCallActivity.class));
                         break;
+                    case 7:// 高级工具
+                        startActivity(new Intent(getBaseContext(), ToolCollectionActivity.class));
+                        break;
                     case 8:// 设置中心
                         startActivity(new Intent(getBaseContext(), SettingCenterActivity.class));
                         break;

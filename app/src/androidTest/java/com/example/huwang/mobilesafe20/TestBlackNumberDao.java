@@ -2,8 +2,10 @@ package com.example.huwang.mobilesafe20;
 
 import android.support.test.runner.AndroidJUnit4;
 import android.test.AndroidTestCase;
+import android.util.Log;
 
 import com.example.huwang.mobilesafe20.bean.BlackNumberInfo;
+import com.example.huwang.mobilesafe20.db.dao.AddressDao;
 import com.example.huwang.mobilesafe20.db.dao.BlackNumberDao;
 import com.example.huwang.mobilesafe20.utils.CallLogUtil;
 
@@ -33,5 +35,15 @@ public class TestBlackNumberDao extends AndroidTestCase {
     @Test
     public void testDeleteLogs(){
         CallLogUtil.deleteCallLogByNumber(mContext, "10010");
+    }
+
+    @Test
+    public void testSubString() {
+        AddressDao dao =  new AddressDao(mContext);
+        String result = dao.findAddressByNumber("18711012201");
+        Log.i("zhang", result);
+        result = dao.findAddressByNumber("01055525552");
+        Log.i("zhang", result);
+
     }
 }

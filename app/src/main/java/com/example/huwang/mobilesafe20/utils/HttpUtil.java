@@ -23,7 +23,7 @@ public class HttpUtil {
             HttpURLConnection conn = (HttpURLConnection)url.openConnection();
             //设置get连接时长5000
             conn.setRequestMethod("GET");
-            conn.setConnectTimeout(5000);
+            conn.setConnectTimeout(2000);
             if (200 == conn.getResponseCode()) {
                 InputStream input = conn.getInputStream();
                 ByteArrayOutputStream out = new ByteArrayOutputStream();

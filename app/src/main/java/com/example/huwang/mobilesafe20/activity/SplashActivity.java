@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -19,6 +20,7 @@ import android.view.animation.AlphaAnimation;
 import android.widget.TextView;
 
 import com.example.huwang.mobilesafe20.R;
+import com.example.huwang.mobilesafe20.utils.FileUtils;
 import com.example.huwang.mobilesafe20.utils.HttpUtil;
 import com.example.huwang.mobilesafe20.utils.ToastUtil;
 import com.lidroid.xutils.HttpUtils;
@@ -30,6 +32,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by huwang on 2017/3/16.
@@ -47,6 +51,15 @@ public class SplashActivity extends Activity {
         AlphaAnimation anim = new AlphaAnimation(0.5f, 1.0f);
         // 时长
         anim.setDuration(1000);
+        try {
+            AssetManager am = getAssets();
+            InputStream input = am.open("address.db");
+            String path = "data/data/" + this.getPackageName() + "/databases";
+            String name = "address.db";
+            FileUtils.copyFile(input, path, name);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         // 作用于哪个范围
         findViewById(R.id.root).startAnimation(anim);
 
@@ -204,7 +217,7 @@ public class SplashActivity extends Activity {
         savePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/***.exe";
         System.out.println(url);
         //创建核心类
-        HttpUtils httpUtils = new HttpUtils(5000);
+        HttpUtils httpUtils = new HttpUtils(2000);
 //        httpUtils.download(文件地址，保存路径， 获取下载参数的回掉)；
         //RequestCallBack获取下载过程中的参数
         httpUtils.download(url,savePath, new RequestCallBack<File>() {

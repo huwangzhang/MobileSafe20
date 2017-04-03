@@ -50,6 +50,7 @@
         <activity
             android:name=".activity.ToolCollectionActivity"
             android:label="@string/app_name">
+
         </activity>
         <!--归属地查询-->
         <activity
