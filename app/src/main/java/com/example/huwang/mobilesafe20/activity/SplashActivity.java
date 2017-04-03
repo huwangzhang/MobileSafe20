@@ -1,10 +1,8 @@
 package com.example.huwang.mobilesafe20.activity;
 
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Application;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -48,7 +46,7 @@ public class SplashActivity extends Activity {
         // AlphaAnimation anim=new AlphaAnimation(透明度开始,透明度 结束)
         AlphaAnimation anim = new AlphaAnimation(0.5f, 1.0f);
         // 时长
-        anim.setDuration(3000);
+        anim.setDuration(1000);
         // 作用于哪个范围
         findViewById(R.id.root).startAnimation(anim);
 

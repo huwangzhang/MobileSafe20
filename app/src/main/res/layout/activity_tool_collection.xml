@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity">
+
+    <!--标题-->
+    <TextView
+        style="@style/Setting_Title"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="高级工具"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/address_query"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="号码归属地查询"
+        style="@style/Setting_Text"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sms_backup"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="短息备份"
+        style="@style/Setting_Text"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sms_restore"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="短信还原"
+        style="@style/Setting_Text"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/apps_lock"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:text="程序锁"
+        style="@style/Setting_Text"/>
+</LinearLayout>

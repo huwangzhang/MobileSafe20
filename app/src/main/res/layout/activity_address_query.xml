@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity">
+
+    <!--标题-->
+    <TextView
+        style="@style/Setting_Title"
+        android:text="号码归属地查询"
+       />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Setting_Text"
+        android:text="请输入您要查询的号码："/>
+    <EditText
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Setting_Text"
+        android:text="归属地信息："/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="#181818"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent"/>
+        <Button
+            android:text="我要报错"
+            android:layout_gravity="center_vertical"
+            style="@style/Setting_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

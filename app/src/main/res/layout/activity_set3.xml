@@ -12,9 +12,13 @@
         android:text="3.设置安全号码"
        />
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         style="@style/Setting_Text"
         android:text="SIM卡变更后"/>
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="报警短信会发给安全号码"
         style="@style/Setting_Text"/>
     <EditText
@@ -47,16 +51,21 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:text="下一步 "
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
             android:drawableRight="@drawable/next"
             style="@style/Setting_Button" />
         <TextView
+            style="@style/Setting_Button"
             android:onClick="prePage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="上一步 "
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
             android:drawableLeft="@drawable/previous"
-            style="@style/Setting_Button" />
+            android:text=" 上一步 " />
         
         
     </RelativeLayout>

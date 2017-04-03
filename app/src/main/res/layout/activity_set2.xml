@@ -12,10 +12,13 @@
         android:text="2.手机卡绑定"
        />
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         style="@style/Setting_Text"
         android:text="通过绑定sim卡："/>
     <TextView
-        android:drawableLeft="@android:drawable/star_big_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="下次重启手机如果发现sim卡变更就会发送报警短信"
         style="@style/Setting_Text"/>
     <TextView
@@ -45,17 +48,20 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:text="下一步 "
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
             android:drawableRight="@drawable/next"
             style="@style/Setting_Button" />
         <TextView
+            style="@style/Setting_Button"
             android:onClick="prePage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="上一步 "
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
             android:drawableLeft="@drawable/previous"
-            style="@style/Setting_Button" />
-        
+            android:text=" 上一步 " />
         
     </RelativeLayout>
 </LinearLayout>

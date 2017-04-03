@@ -11,23 +11,36 @@
         style="@style/Setting_Title"
         android:text="1.欢迎使用手机防盗"
        />
+
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         style="@style/Setting_Text"
         android:text="您的手机安全卫士："/>
+
+
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:drawableLeft="@android:drawable/star_big_on"
         android:text="SIM卡变更报警"
         style="@style/Setting_Text"/>
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:drawableLeft="@android:drawable/star_big_on"
         style="@style/Setting_Text"
         android:text="GPS追踪"/>
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:drawableLeft="@android:drawable/star_big_on"
         style="@style/Setting_Text"
         android:text="远程锁屏"
         android:gravity="left|center_vertical" />
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:drawableLeft="@android:drawable/star_big_on"
         style="@style/Setting_Text"
         android:text="远程销毁数据" />
@@ -52,8 +65,9 @@
             android:layout_alignParentRight="true"
             android:text="下一步 "
             android:drawableRight="@drawable/next"
-            style="@style/Setting_Button" />
-        
-        
+            style="@style/Setting_Button"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"/>
     </RelativeLayout>
 </LinearLayout>

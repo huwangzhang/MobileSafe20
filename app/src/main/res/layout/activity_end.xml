@@ -51,21 +51,29 @@
         android:text="重新进入设置向导" />
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         style="@style/Setting_Text"
         android:drawableLeft="@android:drawable/star_big_on"
         android:text="GPS追踪:location" />
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         style="@style/Setting_Text"
         android:drawableLeft="@android:drawable/star_big_on"
         android:text="播放报警音乐:alarm" />
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         style="@style/Setting_Text"
         android:drawableLeft="@android:drawable/star_big_on"
         android:text="远程数据销毁:wipedata" />
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         style="@style/Setting_Text"
         android:drawableLeft="@android:drawable/star_big_on"
         android:gravity="left|center_vertical"
@@ -75,13 +83,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-
         <TextView
             android:id="@+id/textView1"
             style="@style/Setting_Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
             android:onClick="savePage"
             android:textSize="22sp"
             android:text="完成进入主页 " />
