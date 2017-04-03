@@ -3,6 +3,6 @@
     <color name="item_name_default">#000000</color>
     <color name="item_name_pressed">#76c900</color>
 
-    <string name="lable_info">安全卫士申请超级管理员账号</string>
-    <string name="description_info">我是黑马安全卫址激活超级管理账号给我 更好地保护你的手机</string>
+    <string name="label_info">安全卫士申请超级管理员账号</string>
+    <string name="description_info">手机超级管理员</string>
 </resources>

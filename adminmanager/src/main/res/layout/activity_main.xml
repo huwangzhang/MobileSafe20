@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.adminmanager.MainActivity">
+
+    <Button
+        android:onClick="lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="锁屏"/>
+    <Button
+        android:onClick="wipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除数据"/>
+    <Button
+        android:onClick="active"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="激活"/>
+    <Button
+        android:onClick="inactive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"/>
+
+</LinearLayout>

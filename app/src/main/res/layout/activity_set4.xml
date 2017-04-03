@@ -13,10 +13,17 @@
        />
     <CheckBox
         android:id="@+id/checkbox"
-        android:layout_width="wrap_content"
+        style="@style/Setting_Text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="防护保护已经开启"
-        android:textSize="18sp" />
+        android:text="         打勾开启防盗保护" />
+
+    <TextView
+        style="@style/Setting_Text"
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="防盗保护没有开启" />
 
     <include layout="@layout/view_four_dotlayout"/>
     <!-- 按钮 -->

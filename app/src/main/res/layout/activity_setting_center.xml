@@ -24,7 +24,16 @@
         zhang:m_title="自动更新设置"
         zhang:desc_on="自动更新设置已开启"
         zhang:desc_off="自动更新设置已关闭"
-        zhang:check="true"/>
+        zhang:check="false"/>
+
+    <com.example.huwang.mobilesafe20.ui.SettingCenterView
+        android:id="@+id/item_blacknumber"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        zhang:m_title="黑名单设置"
+        zhang:desc_on="黑名单拦截已开启"
+        zhang:desc_off="黑名单拦截已关闭"
+        zhang:check="false"/>
    <!-- <include
         android:id="@+id/select_style"
         layout="@layout/view_item_arrow" />-->

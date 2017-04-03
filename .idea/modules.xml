@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DownLoad/DownLoad.iml" filepath="$PROJECT_DIR$/DownLoad/DownLoad.iml" />
       <module fileurl="file://$PROJECT_DIR$/MobileSafe20.iml" filepath="$PROJECT_DIR$/MobileSafe20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adminmanager/adminmanager.iml" filepath="$PROJECT_DIR$/adminmanager/adminmanager.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/smsreceiver/smsreceiver.iml" filepath="$PROJECT_DIR$/smsreceiver/smsreceiver.iml" />
       <module fileurl="file://$PROJECT_DIR$/takephotos/takephotos.iml" filepath="$PROJECT_DIR$/takephotos/takephotos.iml" />

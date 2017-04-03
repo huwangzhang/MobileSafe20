@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity">
+
+    <!-- 两个textView  姓名 与号码 -->
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/Setting_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="王思聪"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/desc"
+        style="@style/Setting_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:text="拦截电话"
+        android:textColor="#808080" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_delete_selector"
+        android:clickable="true" />
+
+</RelativeLayout>

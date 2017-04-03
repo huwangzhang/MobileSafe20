@@ -19,6 +19,8 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 public class SettingCenterActivity extends Activity {
     @ViewInject(R.id.item_update)
     SettingCenterView item_update;
+    @ViewInject(R.id.item_blacknumber)
+    SettingCenterView item_blacknumber;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,6 +43,20 @@ public class SettingCenterActivity extends Activity {
 
             }
         });
+        item_blacknumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("zhang", "黑名单设置开关");
+                boolean flag = item_blacknumber.isCheck();
+                item_blacknumber.setCheck(!flag);
+
+                //存储自动更新状态
+                SharedPreferences.Editor editor = getSharedPreferences("config", MODE_PRIVATE).edit();
+                editor.putBoolean("item_blacknumber", item_blacknumber.isCheck());
+                editor.commit();
+
+            }
+        });
     }
 
     /**
@@ -51,6 +67,8 @@ public class SettingCenterActivity extends Activity {
         super.onStart();
         Boolean flag = getSharedPreferences("config", MODE_PRIVATE).getBoolean("item_update", false);
         item_update.setCheck(flag);
+        Boolean numberflag = getSharedPreferences("config", MODE_PRIVATE).getBoolean("item_blacknumber", false);
+        item_blacknumber.setCheck(numberflag);
     }
 
     @Override

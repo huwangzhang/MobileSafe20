@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.huwang.mobilesafe20.R;
 import com.example.huwang.mobilesafe20.adapter.HomeAdapter;
+import com.example.huwang.mobilesafe20.service.SmsCallProtectService;
 import com.example.huwang.mobilesafe20.utils.MD5Utils;
 import com.example.huwang.mobilesafe20.utils.ToastUtil;
 
@@ -37,6 +38,8 @@ public class HomeActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        startService(new Intent(this, SmsCallProtectService.class));
         //初始化数据
         gridView = (GridView) findViewById(R.id.gridview);
         my_menu = (LinearLayout) findViewById(R.id.my_menu);

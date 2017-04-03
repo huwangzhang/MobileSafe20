@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity" >
+
+    <!-- 标题 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#A4F66E"
+            android:gravity="center"
+            android:text="通讯卫士"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/add"
+            style="@style/Setting_Button"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="添加" />
+    </RelativeLayout>
+
+    <!-- cacheColorHint 缓存颜色 -->
+    <!-- divider分割线 -->
+    <!-- dividerHeight线高 -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@drawable/list_devider"
+            android:dividerHeight="1dp" >
+        </ListView>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/no_data"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="暂时没有黑名单数据,快快添加吧!"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+</LinearLayout>
