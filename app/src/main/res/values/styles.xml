@@ -39,5 +39,30 @@
         <item name="android:padding">2dp</item>
         <item name="android:clickable">true</item>
     </style>
-
+    <style name="Tool_Item" parent="@style/Setting_Text">
+        <item name="android:drawableLeft">@android:drawable/star_big_on</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+    <style name="PopWindow_Button" parent="android:Widget.TextView">
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <style name="Process_Manager_Button" parent="@style/Setting_Button">
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+    <style name="ListView_Style" parent="android:Widget.ListView.White">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:divider">#272727</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:listSelector">@drawable/list_item_selector</item>
+    </style>
 </resources>

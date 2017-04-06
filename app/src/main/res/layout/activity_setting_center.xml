@@ -34,8 +34,8 @@
         zhang:desc_on="黑名单拦截已开启"
         zhang:desc_off="黑名单拦截已关闭"
         zhang:check="false"/>
-   <!-- <include
+    <include
         android:id="@+id/select_style"
-        layout="@layout/view_item_arrow" />-->
+        layout="@layout/view_item_arrow" />
 
 </LinearLayout>

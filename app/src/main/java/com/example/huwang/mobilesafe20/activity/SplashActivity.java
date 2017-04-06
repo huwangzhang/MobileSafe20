@@ -16,10 +16,12 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.animation.AlphaAnimation;
 import android.widget.TextView;
 
 import com.example.huwang.mobilesafe20.R;
+import com.example.huwang.mobilesafe20.service.AddressShowService;
 import com.example.huwang.mobilesafe20.utils.FileUtils;
 import com.example.huwang.mobilesafe20.utils.HttpUtil;
 import com.example.huwang.mobilesafe20.utils.ToastUtil;
@@ -46,6 +48,9 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         process_text = (TextView)findViewById(R.id.progress_text);
+
+
+        startService(new Intent(this, AddressShowService.class));
         // 动画
         // AlphaAnimation anim=new AlphaAnimation(透明度开始,透明度 结束)
         AlphaAnimation anim = new AlphaAnimation(0.5f, 1.0f);
@@ -57,6 +62,7 @@ public class SplashActivity extends Activity {
             String path = "data/data/" + this.getPackageName() + "/databases";
             String name = "address.db";
             FileUtils.copyFile(input, path, name);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

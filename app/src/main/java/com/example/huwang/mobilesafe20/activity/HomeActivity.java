@@ -23,6 +23,7 @@ import com.example.huwang.mobilesafe20.R;
 import com.example.huwang.mobilesafe20.adapter.HomeAdapter;
 import com.example.huwang.mobilesafe20.service.SmsCallProtectService;
 import com.example.huwang.mobilesafe20.utils.MD5Utils;
+import com.example.huwang.mobilesafe20.utils.ShortCutUtils;
 import com.example.huwang.mobilesafe20.utils.ToastUtil;
 
 /**
@@ -40,6 +41,9 @@ public class HomeActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         startService(new Intent(this, SmsCallProtectService.class));
+
+//        ShortCutUtils.addShortCut(this, HomeActivity.class);
+
         //初始化数据
         gridView = (GridView) findViewById(R.id.gridview);
         my_menu = (LinearLayout) findViewById(R.id.my_menu);
@@ -59,8 +63,16 @@ public class HomeActivity extends Activity {
                             showLoginDialog();
                         }
                         break;
+
                     case 1:// 通讯卫士
                         startActivity(new Intent(getBaseContext(), SmsCallActivity.class));
+                        break;
+                    case 2:// 软件管家
+                        Intent intent2 = new Intent();
+                        // huwang.intent.action.APPS
+                        intent2.setAction("huwang.intent.action.APPS");// 动作
+                        intent2.addCategory(Intent.CATEGORY_DEFAULT);// 类别
+                        startActivity(intent2);
                         break;
                     case 7:// 高级工具
                         startActivity(new Intent(getBaseContext(), ToolCollectionActivity.class));

@@ -20,19 +20,19 @@
         android:drawableLeft="@android:drawable/star_big_on"
         android:text="号码归属地查询"
         style="@style/Setting_Text"/>
-    <TextView
+    <!--<TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sms_backup"
         android:drawableLeft="@android:drawable/star_big_on"
         android:text="短息备份"
-        style="@style/Setting_Text"/>
+        style="@style/Setting_Text"/>-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/sms_restore"
+        android:id="@+id/sms_tools"
         android:drawableLeft="@android:drawable/star_big_on"
-        android:text="短信还原"
+        android:text="短信功能"
         style="@style/Setting_Text"/>
     <TextView
         android:layout_width="match_parent"

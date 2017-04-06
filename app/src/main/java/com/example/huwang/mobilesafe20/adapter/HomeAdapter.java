@@ -1,9 +1,13 @@
 package com.example.huwang.mobilesafe20.adapter;
 
 import android.content.Context;
+import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.AbsListView;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,10 +19,13 @@ import com.example.huwang.mobilesafe20.R;
 
 public class HomeAdapter extends BaseAdapter {
     private Context context;
-
+    private int SCREEN_WIDTH = 100;
     public HomeAdapter(Context context) {
         super();
         this.context = context;
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        SCREEN_WIDTH = display.getWidth();
     }
 
     private String[] names = new String[]{
@@ -67,6 +74,10 @@ public class HomeAdapter extends BaseAdapter {
         //视图
         //把布局转换成对象View：布局膨胀
         View view = View.inflate(context, R.layout.view_item_gridview, null);
+        int viewWidth = SCREEN_WIDTH / 3;
+        int viewHeight = SCREEN_WIDTH / 3;
+        GridView.LayoutParams params = new GridView.LayoutParams(viewWidth, viewHeight);
+        view.setLayoutParams(params);
         ImageView iconView = (ImageView) view.findViewById(R.id.icon);
         TextView nameView = (TextView) view.findViewById(R.id.name);
         iconView.setImageResource(resid);

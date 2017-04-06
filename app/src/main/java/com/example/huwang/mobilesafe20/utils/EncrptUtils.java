@@ -1,6 +1,6 @@
 package com.example.huwang.mobilesafe20.utils;
 
-import com.example.huwang.mobilesafe20.engine.AesCbcWithIntegrity;
+import com.example.huwang.mobilesafe20.encrypt.AesCbcWithIntegrity;
 
 import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;

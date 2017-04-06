@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/local_popup_bg"
+    android:orientation="horizontal"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity" >
+
+    <!-- 卸载 -->
+
+    <TextView
+        android:id="@+id/uninstall"
+        style="@style/PopWindow_Button"
+        android:drawableTop="@drawable/img1"
+        android:text="卸载" />
+
+    <!-- 启动 -->
+
+    <TextView
+        android:id="@+id/start"
+        style="@style/PopWindow_Button"
+        android:drawableTop="@drawable/img2"
+        android:text="启动" />
+    <!-- 分享 -->
+
+    <TextView
+        android:id="@+id/shared"
+        style="@style/PopWindow_Button"
+        android:drawableTop="@drawable/img3"
+        android:text="分享" />
+    <!-- 设置 -->
+
+    <TextView
+        android:id="@+id/setting"
+        style="@style/PopWindow_Button"
+        android:drawableTop="@drawable/img4"
+        android:text="设置" />
+
+</LinearLayout>

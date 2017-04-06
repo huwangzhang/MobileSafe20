@@ -5,11 +5,15 @@ import android.test.AndroidTestCase;
 import android.util.Log;
 
 import com.example.huwang.mobilesafe20.bean.BlackNumberInfo;
+import com.example.huwang.mobilesafe20.bean.SmsInfo;
 import com.example.huwang.mobilesafe20.db.dao.AddressDao;
 import com.example.huwang.mobilesafe20.db.dao.BlackNumberDao;
 import com.example.huwang.mobilesafe20.utils.CallLogUtil;
+import com.example.huwang.mobilesafe20.utils.SmsUtil;
 
 import org.junit.Test;
+
+import java.util.List;
 
 /**
  * Created by huwang on 2017/4/3.
@@ -45,5 +49,14 @@ public class TestBlackNumberDao extends AndroidTestCase {
         result = dao.findAddressByNumber("01055525552");
         Log.i("zhang", result);
 
+    }
+
+    @Test
+    public void testFindAll() {
+        List<SmsInfo> list = SmsUtil.findAllFromProvider(mContext);
+        for (SmsInfo smsInfo : list) {
+            Log.i("zhang", smsInfo.address + " " + smsInfo.body);
+        }
+        Log.i("zhang", mContext.getPackageName());
     }
 }

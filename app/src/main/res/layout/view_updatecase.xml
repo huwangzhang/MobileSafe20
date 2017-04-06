@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="#363636"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity">
+
+    <!-- 两个textView  姓名 与号码 -->
+
+    <TextView
+        android:id="@+id/letter"
+        style="@style/Setting_Text"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="A"
+        android:textSize="40sp"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

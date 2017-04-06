@@ -22,7 +22,7 @@
  * Created by Isaac Potoczny-Jones on 11/12/14.
  */
 
-package com.example.huwang.mobilesafe20.engine;
+package com.example.huwang.mobilesafe20.encrypt;
 
 import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;

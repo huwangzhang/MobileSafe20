@@ -5,6 +5,9 @@ import android.text.format.Formatter;
 
 import java.util.regex.Pattern;
 
+import opensource.jpinyin.PinyinFormat;
+import opensource.jpinyin.PinyinHelper;
+
 /**
  * Created by huwang on 2017/4/3.
  */
@@ -39,9 +42,9 @@ public class FormatUtils {
      * @param msg
      * @return
      */
-//    public static String toPinYin(String msg)
-//    {
-//        String pinyin=PinyinHelper.convertToPinyinString(msg, "",PinyinFormat.WITHOUT_TONE);
-//        return pinyin;
-//    }
+    public static String toPinYin(String msg)
+    {
+        String pinyin= PinyinHelper.convertToPinyinString(msg, "", PinyinFormat.WITHOUT_TONE);
+        return pinyin;
+    }
 }

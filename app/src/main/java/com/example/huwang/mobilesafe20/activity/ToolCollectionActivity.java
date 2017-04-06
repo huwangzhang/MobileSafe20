@@ -19,13 +19,20 @@ import com.lidroid.xutils.view.annotation.event.OnClick;
 public class ToolCollectionActivity extends Activity {
     @ViewInject(R.id.address_query)
     TextView address_query;
-    @ViewInject(R.id.sms_backup)
-    TextView sms_backup;
-    @ViewInject(R.id.sms_restore)
-    TextView sms_restore;
+    @ViewInject(R.id.sms_tools)
+    TextView sms_tools;
+//    @ViewInject(R.id.sms_backup)
+//    TextView sms_backup;
+//    @ViewInject(R.id.sms_restore)
+//    TextView sms_restore;
     @ViewInject(R.id.apps_lock)
     TextView apps_lock;
 
+
+    @OnClick(R.id.sms_tools)
+    public void startSmstools(View view) {
+        startActivity(new Intent(this, SmsBackupRestoreActivity.class));
+    }
     @OnClick(R.id.address_query)
     public void getQueryPage(View view) {
         startActivity(new Intent(this, AddressQueryActivity.class));
