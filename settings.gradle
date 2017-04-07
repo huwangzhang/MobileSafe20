@@ -1,1 +1,1 @@
-include ':app', ':DownLoad', ':smsreceiver', ':takephotos', ':adminmanager'
+include ':app', ':DownLoad', ':smsreceiver', ':takephotos', ':adminmanager', ':rocket'

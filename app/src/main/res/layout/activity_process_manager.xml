@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity" >
+
+    <!-- 标题 -->
+
+    <TextView
+        style="@style/Setting_Title"
+        android:background="#ACFE76"
+        android:gravity="center"
+        android:text="进程管理"
+        android:textSize="25sp" />
+    <!-- 提示 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/process_count"
+            style="@style/Setting_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进程个数20个"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/memory_info"
+            style="@style/Setting_Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:text="内存可用100M/总共600M"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <!-- 列表 -->
+        <!-- dividerHeight分割线高 -->
+        <!-- divider 颜色 图片 -->
+        <!-- listSelector 行的选择器 -->
+        <!-- cacheColorHint缓存颜色 黑色 可能在用户滑动会出现 -->
+
+        <ListView
+            android:id="@+id/listview"
+            style="@style/ListView_Style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/waiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:orientation="vertical" >
+
+            <include layout="@layout/view_waiting" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 底部操作菜单 -->
+    <!-- android:weightSum="4" -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <TextView
+            android:id="@+id/clean"
+            style="@style/Process_Manager_Button"
+            android:text="清理" />
+
+        <TextView
+            android:id="@+id/select_all"
+            style="@style/Process_Manager_Button"
+            android:text="全选" />
+
+        <TextView
+            android:id="@+id/select_reverse"
+            style="@style/Process_Manager_Button"
+            android:text="反选" />
+
+        <TextView
+            android:id="@+id/process_setting"
+            style="@style/Process_Manager_Button"
+            android:text="设置" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity" >
+
+    <!-- 图标 -->
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/app_name"
+            style="@style/Setting_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="快播应用1.0"
+            android:textColor="#000000"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/process_mem"
+            style="@style/Setting_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="占用内存:100M"
+            android:textColor="#A8A8A8" />
+    </LinearLayout>
+    <!-- 应用名称 -->
+
+
+    <!-- 安装位置 -->
+    <!-- 选 中 -->
+
+    <CheckBox
+        android:clickable="false"
+        android:focusable="false"
+        android:id="@+id/process_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity" >
+
+    <!-- 标题 -->
+
+    <TextView
+        style="@style/Setting_Title"
+        android:background="#ACFE76"
+        android:gravity="center"
+        android:text="进程管理设置"
+        android:textSize="25sp" />
+
+    <CheckBox
+        android:id="@+id/show_sys_process"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示系统进程" />
+    <CheckBox
+        android:id="@+id/lock_screen_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="锁屏清理进程" />
+
+</LinearLayout>

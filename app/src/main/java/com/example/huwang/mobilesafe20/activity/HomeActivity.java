@@ -74,6 +74,9 @@ public class HomeActivity extends Activity {
                         intent2.addCategory(Intent.CATEGORY_DEFAULT);// 类别
                         startActivity(intent2);
                         break;
+                    case 3:// 进程管理
+                        startActivity(new Intent(getBaseContext(), ProcessManagerActivity.class));
+                        break;
                     case 7:// 高级工具
                         startActivity(new Intent(getBaseContext(), ToolCollectionActivity.class));
                         break;

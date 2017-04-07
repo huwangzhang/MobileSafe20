@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#363636"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity" >
+
+    <!-- 两个textView  姓名 与号码 -->
+
+    <TextView
+        android:id="@+id/processtitle"
+        style="@style/Setting_Text"
+        android:textSize="23sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户应用程序:100"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

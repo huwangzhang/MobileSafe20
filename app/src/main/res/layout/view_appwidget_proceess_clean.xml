@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/widget_bg_portrait"
+    android:orientation="horizontal"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/widget_bg_portrait_child"
+        android:orientation="vertical" >
+
+        <!-- 进程数据 -->
+
+        <TextView
+            style="@style/Setting_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/process_count"
+            android:text="正在运行的软件:19"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/widget_bg_portrait_child_divider" />
+
+        <TextView
+            style="@style/Setting_Text"
+            android:id="@+id/mem"
+              android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="可用内存:111.9M"
+            android:textColor="#000000" />
+
+        <!-- 剩余内存 -->
+    </LinearLayout>
+    <!-- 显示数据 -->
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <!-- 图标 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/main_icon_36"
+            android:gravity="center"
+            android:text="金山手机卫士"
+            android:textColor="#FFFFFF" />
+        <!-- 一键清理 -->
+
+        <Button
+            android:id="@+id/clean"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_clean_selector"
+            android:gravity="center"
+            android:text="一键清理"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/view_appwidget_proceess_clean"
+    android:minHeight="70dp"
+    android:minWidth="300dp"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="1000" >
+</appwidget-provider><!-- android:minWidth最小宽度 -->
+<!-- minHeight最小高度 -->
+<!-- updatePeriodMillis 86400000 毫秒 =24小时     每隔半小时   Service+Timer -->
+<!-- previewImage预览图片 -->
+<!-- resizeMode 拉伸 -->
