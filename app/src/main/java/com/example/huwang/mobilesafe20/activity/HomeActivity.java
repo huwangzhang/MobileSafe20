@@ -77,6 +77,15 @@ public class HomeActivity extends Activity {
                     case 3:// 进程管理
                         startActivity(new Intent(getBaseContext(), ProcessManagerActivity.class));
                         break;
+                    case 4:// 流量统计
+                        startActivity(new Intent(getBaseContext(), NetStateActivity.class));
+                        break;
+                    case 5:// 手机杀毒
+                        startActivity(new Intent(getBaseContext(), KillVirusActivity.class));
+                        break;
+                    case 6:// 缓存清理
+                        startActivity(new Intent(getBaseContext(), CacheCleanActivity.class));
+                        break;
                     case 7:// 高级工具
                         startActivity(new Intent(getBaseContext(), ToolCollectionActivity.class));
                         break;

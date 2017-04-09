@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity" >
+
+    <!-- 图标 -->
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/app_name"
+        style="@style/Setting_Text"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:singleLine="true"
+        android:text="快播应用1.0"
+        android:textColor="#000000"
+        android:textSize="22sp" />
+    <!-- 应用名称 -->
+
+
+    <!-- 安装位置 -->
+    <!-- 大小 -->
+
+    <TextView
+        android:id="@+id/app_cache"
+        style="@style/Setting_Text"
+        android:textColor="#D4D0C8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:text="100M"/>
+
+</LinearLayout>

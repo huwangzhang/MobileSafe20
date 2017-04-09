@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.huwang.mobilesafe20.MainActivity" >
+
+    <!-- 标题 -->
+
+    <TextView
+        style="@style/Setting_Title"
+        android:background="#ACFE76"
+        android:gravity="center"
+        android:text="病毒查杀"
+        android:textSize="25sp" />
+    <!-- 雷达 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_scanner_malware" />
+
+            <ImageView
+                android:id="@+id/img_act"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/act_scanning_03" />
+        </FrameLayout>
+        <!-- 扫毒进度 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/progresstext"
+                style="@style/Setting_Text"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="扫描快播中..." />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:max="100"
+                android:progress="10"
+                android:progressDrawable="@drawable/layer_list_progressbar" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/kill"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        style="@style/Setting_Button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="杀毒" />
+    <!-- 报告 -->
+
+    <TextView
+        android:id="@+id/scan_status_text"
+        style="@style/Setting_Text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#363636"
+        android:gravity="left|center_vertical"
+        android:text="执行完成"
+        android:textColor="#FFFFFF" />
+
+    <!-- 扫描报告 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#5B7AAF" >
+
+        <LinearLayout
+            android:id="@+id/report_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>

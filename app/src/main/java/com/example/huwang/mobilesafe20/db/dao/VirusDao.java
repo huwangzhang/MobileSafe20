@@ -3,6 +3,7 @@ package com.example.huwang.mobilesafe20.db.dao;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
+import android.util.Log;
 
 /**
  * Created by huwang on 2017/4/6.
@@ -19,7 +20,7 @@ public class VirusDao {
         String desc = null;
         // 外部数据库
         String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/antivirus.db";
-
+//        Log.i("zhang", path);
         // 获取数据库实例
         // SQLiteDatabase db=SQLiteDatabase.openDatabase(路径, 游标工厂, 读写方式);
         SQLiteDatabase db = SQLiteDatabase.openDatabase(path, null, SQLiteDatabase.OPEN_READWRITE);

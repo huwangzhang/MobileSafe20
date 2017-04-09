@@ -38,7 +38,7 @@ public class SafeApplication extends Application {
 		// Intent(this,MoSecurityService.class));//---background
 		// startService(new
 		// Intent(this,AutoKillProcessService.class));//---background
-		 startService(new Intent(this,WatchDogService.class));//---background
+//		 startService(new Intent(this,WatchDogService.class));//---background
 
 		new Thread() {
 			public void run() {
@@ -50,41 +50,41 @@ public class SafeApplication extends Application {
 					e.printStackTrace();
 				}
 
-			};
+			}
 		}.start();
 
-		// 联网同步病毒
-		new Thread() {
-			public void run() {
-
-				try {
-
-					String url = "http://192.168.17.83:8080/update70/virusinfo_1721";
-					String json = HttpUtil.get(url);
-					Log.i("zhang", json);
-
-					// {"version":"1722","list":[{"md5":"sdfdsfsfdsdfsdfsd","desc":"av病毒","type":"6"},{"md5":"sdfdsfsfdsdfsd232d","desc":"bug病毒","type":"6"},{"md5":"sdfdsfsfd23232fsdfsd","desc":"a木马病毒","type":"6"}]}
-					JSONObject jsonObj = new JSONObject(json);
-					String version=jsonObj.getString("version");
-					JSONArray array=jsonObj.getJSONArray("list");
-					Log.i("zhang","version "+version);
-					VirusDao.updateVersion(version);
-					for(int i=0;i<array.length();i++)
-					{
-						//{"md5":"sdfdsfsfdsdfsdfsd","desc":"av病毒","type":"6"}
-						JSONObject item=array.getJSONObject(i);
-						String md5=item.getString("md5");
-						String desc=item.getString("desc");
-						String type=item.getString("type");
-						Log.i("zhang", " md5 "+md5 +" desc"+desc+" type"+type);
-						VirusDao.addMd5(md5, type, desc);
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
-
-				}
-			};
-		}.start();
+//		// 联网同步病毒
+//		new Thread() {
+//			public void run() {
+//
+//				try {
+//
+//					String url = "http://192.168.17.83:8080/update70/virusinfo_1721";
+//					String json = HttpUtil.get(url);
+//					Log.i("zhang", json);
+//
+//					// {"version":"1722","list":[{"md5":"sdfdsfsfdsdfsdfsd","desc":"av病毒","type":"6"},{"md5":"sdfdsfsfdsdfsd232d","desc":"bug病毒","type":"6"},{"md5":"sdfdsfsfd23232fsdfsd","desc":"a木马病毒","type":"6"}]}
+//					JSONObject jsonObj = new JSONObject(json);
+//					String version=jsonObj.getString("version");
+//					JSONArray array=jsonObj.getJSONArray("list");
+//					Log.i("zhang","version "+version);
+//					VirusDao.updateVersion(version);
+//					for(int i=0;i<array.length();i++)
+//					{
+//						//{"md5":"sdfdsfsfdsdfsdfsd","desc":"av病毒","type":"6"}
+//						JSONObject item=array.getJSONObject(i);
+//						String md5=item.getString("md5");
+//						String desc=item.getString("desc");
+//						String type=item.getString("type");
+//						Log.i("zhang", " md5 "+md5 +" desc"+desc+" type"+type);
+//						VirusDao.addMd5(md5, type, desc);
+//					}
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//
+//				}
+//			}
+//		}.start();
 
 	}
 }

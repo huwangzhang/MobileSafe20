@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#D4D0C8" >
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/app" />
+
+    <TextView
+        android:id="@+id/app_name"
+        style="@style/Setting_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:drawableRight="@drawable/check_status_red"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="扫描快播中..."
+        android:textColor="#FF0000" />
+
+</LinearLayout>

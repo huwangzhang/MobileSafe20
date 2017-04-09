@@ -4,6 +4,12 @@
     android:versionCode="1"
     android:versionName="友情测试版8.1.1">
 
+    <!-- 读取data/包名/文件信息 -->
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <!-- 删除应用的cache文件夹 只有系统应用才使用使用  system app -->
+    <!-- <uses-permission android:name="android.permission.DELETE_CACHE_FILES"/> -->
+    <!-- 清空整个系统的cache文件 -->
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
 
     <!-- 使用摄像头权限 -->
     <uses-permission android:name="android.permission.CAMERA" />
@@ -208,5 +214,8 @@
             android:launchMode="singleInstance">
 
         </activity>
+        <activity android:name=".activity.KillVirusActivity"/>
+        <activity android:name=".activity.CacheCleanActivity"/>
+        <activity android:name=".activity.NetStateActivity"/>
     </application>
 </manifest>
