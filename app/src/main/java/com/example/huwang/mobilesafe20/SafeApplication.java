@@ -7,10 +7,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import android.app.Application;
+import android.content.Intent;
 import android.os.Environment;
 import android.util.Log;
 
 import com.example.huwang.mobilesafe20.db.dao.VirusDao;
+import com.example.huwang.mobilesafe20.service.WatchDogService;
 import com.example.huwang.mobilesafe20.utils.FileUtils;
 import com.example.huwang.mobilesafe20.utils.HttpUtil;
 
@@ -36,7 +38,7 @@ public class SafeApplication extends Application {
 		// Intent(this,MoSecurityService.class));//---background
 		// startService(new
 		// Intent(this,AutoKillProcessService.class));//---background
-		// startService(new Intent(this,WatchDogService.class));//---background
+		 startService(new Intent(this,WatchDogService.class));//---background
 
 		new Thread() {
 			public void run() {

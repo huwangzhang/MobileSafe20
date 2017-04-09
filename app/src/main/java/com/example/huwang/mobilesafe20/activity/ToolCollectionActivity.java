@@ -27,7 +27,10 @@ public class ToolCollectionActivity extends Activity {
 //    TextView sms_restore;
     @ViewInject(R.id.apps_lock)
     TextView apps_lock;
-
+    @OnClick(R.id.apps_lock)
+    public void openApplock(View view) {
+        startActivity(new Intent(this, AppLockListActivity.class));
+    }
 
     @OnClick(R.id.sms_tools)
     public void startSmstools(View view) {
