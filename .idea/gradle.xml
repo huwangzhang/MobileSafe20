@@ -8,12 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/DownLoad" />
-            <option value="$PROJECT_DIR$/adminmanager" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/rocket" />
-            <option value="$PROJECT_DIR$/smsreceiver" />
-            <option value="$PROJECT_DIR$/takephotos" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

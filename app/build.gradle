@@ -6,7 +6,7 @@ android {
     defaultConfig {
         multiDexEnabled true
         applicationId "com.example.huwang.mobilesafe20"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 25
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
